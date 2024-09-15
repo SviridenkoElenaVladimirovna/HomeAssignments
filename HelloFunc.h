@@ -1,5 +1,5 @@
-#ifndef HEADERFIRST_H 
-#define HEADERFIRST_H
+#ifndef HELLOFUNC_H 
+#define HELLOFUNC_H
 #include <string>
 
 void printHello(std::string subject);

@@ -1,5 +1,5 @@
 
-PROJECT = First
+PROJECT = FirstTask
 
 
 IDIR = .
@@ -13,9 +13,9 @@ LDIR = ../lib
 
 LIBS = -lm
 
-DEPS = headerfirst.h
+DEPS = HelloFunc.h
 
-OBJ = FirstTask.o Funk.o
+OBJ = Main.o HelloFunc.o
 
 .PHONY: default
 default: all
