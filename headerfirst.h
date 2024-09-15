@@ -1,6 +1,7 @@
 #ifndef HEADERFIRST_H 
 #define HEADERFIRST_H
+#include <string>
 
-void hello();
+void printHello(std::string subject);
 
 #endif 

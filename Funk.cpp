@@ -1,6 +1,6 @@
 #include "headerfirst.h" 
 #include <iostream>
 
-void hello() { 
-std::cout << "Hello, world" << std::endl; 
+void printHello(std::string subject) {
+    std::cout << "Hello, " << subject << "!" << std::endl; 
 }
