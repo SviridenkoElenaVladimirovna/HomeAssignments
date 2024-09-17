@@ -3,7 +3,7 @@
 #include <string>
 
 int main() {
-
+ //очепятка в слове world
  printHello("wordl");
  
  std::string subject;
