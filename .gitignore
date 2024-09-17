@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+First
+Main.o
+FirstTask
+HelloFunc.o
+
+
 # User-specific files
 *.rsuser
 *.suo

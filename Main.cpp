@@ -4,7 +4,7 @@
 
 int main() {
 
- printHello("wordl");
+ printHello("world");
  
  std::string subject;
  while(true) {
