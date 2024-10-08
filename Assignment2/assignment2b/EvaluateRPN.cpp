@@ -1,9 +1,14 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+implementation of reverse polish notation and its calculation using stack class
+*/
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <cctype>
 #include <stdexcept>
 #include <cmath> 
+#include "Stack.h"
 #include "EvaluateRPN.h"
 
 double evaluateRPN(const std::string& expr) {

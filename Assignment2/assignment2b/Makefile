@@ -13,9 +13,9 @@ LDIR = ../lib
 
 LIBS = -lm
 
-DEPS = EvaluateRPN.h
+DEPS = EvaluateRPN.h Stack.h
 
-OBJ = main.o EvaluateRPN.o 
+OBJ = main.o EvaluateRPN.o Stack.o
 
 .PHONY: default
 default: all

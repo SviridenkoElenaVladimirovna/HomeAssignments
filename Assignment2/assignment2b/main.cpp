@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+implementation of reverse polish notation and its calculation using stack class
+*/
 #include <iostream>
 #include <sstream>
 #include <string>
