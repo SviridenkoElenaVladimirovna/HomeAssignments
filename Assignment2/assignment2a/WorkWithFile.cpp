@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+Write logic for read binary file. After reading binary file program reverse readed data from binary file and writes it to output.bin binary file
+*/
 #ifndef WORKWITHFILE_CPP
 #define WORKWITHFILE_CPP
 
