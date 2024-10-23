@@ -4,6 +4,7 @@
 #include "TransformerOfficer.h"
 
 TransformerOfficer::TransformerOfficer(): TransformerWarrior() {
+    this->transformerRank = TransformerRank("Officer", 50);
 }
 
 TransformerOfficer::TransformerOfficer(const std::string name, const std::string character, const std::string hobby)

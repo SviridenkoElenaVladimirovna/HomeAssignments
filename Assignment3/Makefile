@@ -1,36 +1,57 @@
 
 PROJECT = assignment3
 
+LIBPROJECT = $(PROJECT).a
 
-IDIR = .
-CXX=g++
+TESTPROJECT = test-$(PROJECT)
 
-CXXFLAGS = -I$(IDIR)
+CXX = g++
 
-ODIR = OBJ
+A = ar
 
-LDIR = ../lib
+AFLAGS = rsv
 
-LIBS = -lm
+CCXFLAGS = -I. -std=c++17 -Wall -g -fPIC
 
-DEPS =  TransformerRank.h TransformerLeader.h Transformer.h TransformerOfficer.h TransformersArmy.h TransformerWarrior.h
+LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
 
-OBJ = main.o Transformer.o TransformerLeader.o TransformerOfficer.o TransformersArmy.o TransformerRank.o TransformerWarrior.o 
+LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+
+DEPS=TransformerRank.h TransformerLeader.h Transformer.h TransformerOfficer.h TransformersArmy.h TransformerWarrior.h
+
+OBJ=main.o Transformer.o TransformerLeader.o TransformerOfficer.o TransformersArmy.o TransformerRank.o TransformerWarrior.o 
+
+TEST-OBJ=test-transformer.o
+
+
 .PHONY: default
-default: all
+
+default: all;
 
 %.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-$(PROJECT): $(OBJ)
-	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
+$(LIBPROJECT): $(OBJ)
+	$(A) $(AFLAGS) $@ $^
 
+$(PROJECT): main.o $(LIBPROJECT)
+	$(CXX) -o $@ main.o $(LDXXFLAGS)
+
+
+$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
+	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
+
+test: $(TESTPROJECT)
 
 all: $(PROJECT)
 
 .PHONY: clean
+
 clean:
-	rm -f *.o *~ core
+	rm -f *.o
 
 cleanall: clean
 	rm -f $(PROJECT)
+	rm -f $(LIBPROJECT)
+	rm -f $(TESTPROJECT)
+

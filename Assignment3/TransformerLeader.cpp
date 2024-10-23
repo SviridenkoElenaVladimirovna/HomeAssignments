@@ -4,6 +4,7 @@
 #include "TransformerLeader.h"
 
 TransformerLeader::TransformerLeader(): TransformerOfficer() {
+    this->transformerRank = TransformerRank("Leader", 100);
 }
 
 TransformerLeader::TransformerLeader(const std::string name, const std::string character, const std::string hobby)
