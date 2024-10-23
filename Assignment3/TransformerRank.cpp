@@ -1,3 +1,8 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+build class hierarchy using association and composition using with tests
+*/
+
 #ifndef TRANSFORMER_RANK_CPP
 #define TRANSFORMER_RANK_CPP
 

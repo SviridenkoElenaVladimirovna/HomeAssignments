@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+build class hierarchy using association and composition using with tests
+*/
 #include "Transformer.h"
 #include "TransformerLeader.h"
 #include "TransformerOfficer.h"

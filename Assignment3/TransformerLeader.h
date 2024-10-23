@@ -1,3 +1,8 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+build class hierarchy using association and composition using with tests
+*/
+
 #ifndef TRANSFORMER_LEADER_H
 #define TRANSFORMER_LEADER_H
 

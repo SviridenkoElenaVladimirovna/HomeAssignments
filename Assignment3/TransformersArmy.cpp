@@ -1,3 +1,8 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+build class hierarchy using association and composition using with tests
+*/
+
 #ifndef TRANSFORMERS_ARMY_CPP
 #define TRANSFORMERS_ARMY_CPP
 
