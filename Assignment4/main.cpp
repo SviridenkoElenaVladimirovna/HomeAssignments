@@ -1,3 +1,8 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+Implementation of operator overloading << for outputting a string to any input/output stream. Implementation of operators >, < for comparing objects. Implementation of constructor overloading. Reworking tests to check the implemented functionality.
+*/
+
 #include "Transformer.h"
 #include "TransformerLeader.h"
 #include "TransformerOfficer.h"

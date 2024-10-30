@@ -1,3 +1,8 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+Implementation of operator overloading << for outputting a string to any input/output stream. Implementation of operators >, < for comparing objects. Implementation of constructor overloading. Reworking tests to check the implemented functionality.
+*/
+
 #ifndef TRANSFORMERS_ARMY_CPP
 #define TRANSFORMERS_ARMY_CPP
 
