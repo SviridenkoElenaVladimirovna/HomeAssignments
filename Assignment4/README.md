@@ -7,9 +7,9 @@
 st130482@student.spbu.ru
 
 ## Description
-Home assingment 4 - Implementation of operator overloading "<<" for outputting a string to any input/output stream. 
-Implementation of operators ">", "<" for comparing objects.
-Implementation of constructor overloading.
+Home assingment 4 - Implementation of operator overloading "<<" for outputting a string to any input/output stream. <br>
+Implementation of operators ">", "<" for comparing objects. <br>
+Implementation of constructor overloading. <br>
 Reworking tests to check the implemented functionality.
 
 ## Build
