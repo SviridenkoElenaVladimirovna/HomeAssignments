@@ -10,82 +10,88 @@ Implementation of operator overloading << for outputting a string to any input/o
 #include "TransformersArmy.h"
 #include "iostream"
 
-TransformersArmy buildAutobotArmy() {
-	TransformersArmy autobotArmy = TransformersArmy("Autobots");
+TransformersArmy buildAutobotArmy()
+{
+    TransformersArmy autobotArmy = TransformersArmy("Autobots");
 
-	Transformer* warrior =
-		new TransformerWarrior("Solder", "Typical autobot", "Hate flowers");
+    Transformer* warrior =
+        new TransformerWarrior("Solder", "Typical autobot", "Hate flowers");
 
-	Transformer* officer =
-		new TransformerOfficer("Officer", "Angry and unfriendly", "Hate butterflies");
+    Transformer* officer =
+        new TransformerOfficer("Officer", "Angry and unfriendly", "Hate butterflies");
 
-	Transformer* leader = new TransformerLeader(
-		"Optimus Prime", "Excellent tactician, takes care of his subordinates", "Love his people");
+    Transformer* leader = new TransformerLeader(
+        "Optimus Prime", "Excellent tactician, takes care of his subordinates", "Love his people");
 
-	autobotArmy.addTransformer(warrior);
-	autobotArmy.addTransformer(officer);
-	autobotArmy.addTransformer(leader);
+    autobotArmy.addTransformer(warrior);
+    autobotArmy.addTransformer(officer);
+    autobotArmy.addTransformer(leader);
 
-	return autobotArmy;
+    return autobotArmy;
 }
 
-TransformersArmy buildDecepticonArmy() {
-	TransformersArmy decepticonArmy = TransformersArmy("Decepticons");
+TransformersArmy buildDecepticonArmy()
+{
+    TransformersArmy decepticonArmy = TransformersArmy("Decepticons");
 
-	Transformer* warrior =
-		new TransformerWarrior("Solder", "Typical decepticon", "Love flowers");
+    Transformer* warrior =
+        new TransformerWarrior("Solder", "Typical decepticon", "Love flowers");
 
-	Transformer* officer =
-		new TransformerOfficer("Officer", "Kind and friendly", "Love butterflies");
+    Transformer* officer =
+        new TransformerOfficer("Officer", "Kind and friendly", "Love butterflies");
 
-	Transformer* leader =
-		new TransformerLeader("Megatron", "Smart, ruthless and determined", "Love authority");
+    Transformer* leader =
+        new TransformerLeader("Megatron", "Smart, ruthless and determined", "Love authority");
 
-	decepticonArmy.addTransformer(warrior);
-	decepticonArmy.addTransformer(officer);
-	decepticonArmy.addTransformer(leader);
+    decepticonArmy.addTransformer(warrior);
+    decepticonArmy.addTransformer(officer);
+    decepticonArmy.addTransformer(leader);
 
-	return decepticonArmy;
+    return decepticonArmy;
 }
 
-Transformer* findStrongestTransformerInArmy(TransformersArmy transformersArmy) {
-	std::vector<Transformer*> transformersInArmy = transformersArmy.getTransformers();
-	Transformer* strongestTransformer = transformersInArmy[0];
+Transformer* findStrongestTransformerInArmy(TransformersArmy transformersArmy)
+{
+    std::vector<Transformer*> transformersInArmy = transformersArmy.getTransformers();
+    Transformer* strongestTransformer = transformersInArmy[0];
 
-	for (int i = 1; i < transformersInArmy.size(); i++) {
-		if (*transformersInArmy[i] > *strongestTransformer) {
-			strongestTransformer = transformersInArmy[i];
-		}
-	}
+    for (int i = 1; i < transformersInArmy.size(); i++)
+    {
+        if (*transformersInArmy[i] > *strongestTransformer)
+        {
+            strongestTransformer = transformersInArmy[i];
+        }
+    }
 
-	return strongestTransformer;
+    return strongestTransformer;
 }
 
-int main() {
-	const std::string DELIMITER = "=====================\n";
+int main()
+{
+    const std::string DELIMITER = "=====================\n";
 
-	std::cout << "Transformers hierarchy\n";
-	
-	TransformersArmy autobotArmy = buildAutobotArmy();
-	TransformersArmy decepticonArmy = buildDecepticonArmy();
+    std::cout << "Transformers hierarchy\n";
 
-	std::cout << DELIMITER
-			<< autobotArmy
-			<< DELIMITER
-			<< decepticonArmy
-			<< DELIMITER;
+    TransformersArmy autobotArmy = buildAutobotArmy();
+    TransformersArmy decepticonArmy = buildDecepticonArmy();
 
-	std::cout << "Strongest transformer in autobots army"
-			<< "\n"
-			<< *findStrongestTransformerInArmy(autobotArmy)
-	        << "\n";
+    std::cout << DELIMITER
+              << autobotArmy
+              << DELIMITER
+              << decepticonArmy
+              << DELIMITER;
 
-	std::cout << DELIMITER;
+    std::cout << "Strongest transformer in autobots army"
+              << "\n"
+              << *findStrongestTransformerInArmy(autobotArmy)
+              << "\n";
 
-	std::cout << "Strongest transformer in decepticons army"
-				<< "\n"
-				<< *findStrongestTransformerInArmy(decepticonArmy)
-				<< "\n";
+    std::cout << DELIMITER;
 
-	return 0;
+    std::cout << "Strongest transformer in decepticons army"
+              << "\n"
+              << *findStrongestTransformerInArmy(decepticonArmy)
+              << "\n";
+
+    return 0;
 }

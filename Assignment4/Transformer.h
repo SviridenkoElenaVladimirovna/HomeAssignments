@@ -39,21 +39,11 @@ public:
 
 	~Transformer();
 
+     friend std::ostream &operator<<(std::ostream &os, Transformer &transformer);
 
-	friend std::ostream &operator<<(std::ostream &os, Transformer &transformer) {
-		os << transformer.toString();
-		return os;
-	}
+    bool operator<(const Transformer& other) const;
+    bool operator>(const Transformer& other) const;
 
-	
-	bool operator<(const Transformer& other) const {
-		return this->strength < other.strength;
-	}
-
-	
-	bool operator>(const Transformer& other) const {
-		return this->strength > other.strength;
-	}
 };
 
 #endif

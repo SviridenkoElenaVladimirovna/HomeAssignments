@@ -27,22 +27,19 @@ std::vector<Transformer*> TransformersArmy::getTransformers() {
 std::string TransformersArmy::getName() {
     return armyName;
 }
+ std::ostream &operator<<(std::ostream &os, TransformersArmy &army) {
+		os << "Army name: " << army.getName() << std::endl;
 
+		for (int i = 0; i < army.transformers.size(); i++) {
+			os << "---\n";
+			os << *(army.transformers[i]) << "\n";
+			os << "---\n";
+		}
+
+		return os;
+	}
 void TransformersArmy::setName(const std::string name) {
     this->armyName = name;
-}
-
-std::string TransformersArmy::toString() {
-    std::string armyInfo = "----TRANSFORMERS ARMY INFO----\n";
-    armyInfo += "Army name: " + armyName + "\n";
-
-    for(int i = 0; i < transformers.size(); i++) {
-        armyInfo += transformers[i]->toString() + "\n";
-        armyInfo += "\n";
-    }
-
-    return armyInfo;
-
 }
 
 #endif

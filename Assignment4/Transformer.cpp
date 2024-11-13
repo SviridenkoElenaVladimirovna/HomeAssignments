@@ -26,7 +26,18 @@ Transformer::Transformer(
       transformerRank("Novice", 0),
       strength(strength) {
 }
+std::ostream &operator<<(std::ostream &os, Transformer &transformer) {
+    os << transformer.toString();
+    return os;
+}
 
+bool Transformer::operator<(const Transformer& other) const {
+    return this->strength < other.strength;
+}
+
+bool Transformer::operator>(const Transformer& other) const {
+    return this->strength > other.strength;
+}
 std::string Transformer::getName() {
     return this->name;
 }

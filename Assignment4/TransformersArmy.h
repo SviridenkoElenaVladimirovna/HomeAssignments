@@ -24,18 +24,9 @@ public:
 	void setName(const std::string name);
 
 	std::string toString();
+         friend std::ostream &operator<<(std::ostream &os, TransformersArmy &army);
 
-	friend std::ostream &operator<<(std::ostream &os, TransformersArmy &army) {
-		os << "Army name: " << army.getName() << std::endl;
 
-		for (int i = 0; i < army.transformers.size(); i++) {
-			os << "---\n";
-			os << *(army.transformers[i]) << "\n";
-			os << "---\n";
-		}
-
-		return os;
-	}
 };
 
 #endif
