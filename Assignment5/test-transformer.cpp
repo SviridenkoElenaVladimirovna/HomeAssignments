@@ -1,6 +1,8 @@
-
+/*
+Sviridenko Elena st130482@student.spbu.ru
+3 virtual methods were implemented and tested
+*/
 #include "gtest/gtest.h"
-
 #include "Transformer.h"
 #include <sstream>
 #include "Autobot.h"

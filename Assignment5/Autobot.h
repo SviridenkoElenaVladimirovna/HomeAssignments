@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+3 virtual methods were implemented and tested
+*/
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 

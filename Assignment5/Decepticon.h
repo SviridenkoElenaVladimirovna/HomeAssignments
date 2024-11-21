@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+3 virtual methods were implemented and tested
+*/
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 #include "Transformer.h"
