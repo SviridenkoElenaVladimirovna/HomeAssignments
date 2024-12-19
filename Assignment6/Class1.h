@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+Created a template class, created partial specialization of this template class for int and double, added tests
+*/
 #ifndef CLASS1_H
 #define CLASS1_H
 

@@ -1,3 +1,7 @@
+/*
+Sviridenko Elena st130482@student.spbu.ru
+Created a template class, created partial specialization of this template class for int and double, added tests
+*/
 #include <iostream>
 #include "TemplateClass.h"
 #include "Class1.h"
